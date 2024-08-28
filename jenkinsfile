@@ -23,9 +23,9 @@ pipeline {
             post {
                 success {
                     zip zipFile: 'Nop.Web.zip',
-                        archive: true,
-                        dir: './published',
-                        overwrite: true
+                    archive: true,
+                    dir: './published',
+                    overwrite: true
 
                 }
             }
