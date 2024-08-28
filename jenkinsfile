@@ -18,8 +18,16 @@ pipeline {
                 dotnetPublish configuration: 'Release',    
                     outputDirectory: 'published',
                     project: 'src/Presentation/Nop.Web/Nop.Web.csproj'
-                    
+                
+            }
+            post {
+                success {
+                    zip zipFile: 'Nop.Web.zip',
+                        archive: true,
+                        dir: './published',
+                        overwrite: true
 
+                }
             }
         }
 
