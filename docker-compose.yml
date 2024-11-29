@@ -3,7 +3,7 @@ name: nop-commerce
 services:
   nop:
     build:
-      context: Dockerfile
+      context: .
     expose:
         - "5000"    
     networks:
