@@ -4,6 +4,7 @@ services:
   nop:
     build:
       context: .
+      dockerfile: Dockerfile
     expose:
         - "5000"    
     networks:
